@@ -1,0 +1,1 @@
+y=xlsread("data.xlsx","sheet1","D9:D14")x=xlsread("data.xlsx","sheet1","I9:I14")

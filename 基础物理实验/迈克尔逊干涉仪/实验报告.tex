@@ -1,0 +1,355 @@
+\documentclass[12pt]{article} 
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{threeparttable} 
+\usepackage{multirow}
+\usepackage{subfigure} % 导言区引入
+\usepackage{tabularx}
+\usepackage{aligned-overset}
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{fontspec}
+\renewcommand{\arraystretch}{1.5}
+% \usepackage[paperwidth=21cm,paperheight=29.7cm]{geometry}
+\usepackage[a4paper,margin=2cm]{geometry}
+\setCJKmainfont{SimSun}
+\setmainfont{SimSun}
+\setsansfont{SimSun}
+% 设置正文字体为四号（12pt）
+% \renewcommand{\CJKmainfont}{SimSun}
+\renewcommand{\CJKfamilydefault}{\CJKrmdefault}
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+\normalsize
+
+\title{迈克尔逊干涉仪实验报告}
+\author{2411545 邱凯锐}
+\date{2025.11.14}
+
+\begin{document}
+\maketitle
+
+\section{实验目的}
+1. 了解迈克尔逊干涉仪的结构原理并掌握调节方法 
+
+2. 观察等厚干涉、等倾干涉
+
+3.  测量钠双线的平均波长和波长差
+
+\section{实验仪器}
+迈克尔逊干涉仪  钠灯
+
+\section{实验原理}
+
+\subsection{迈克尔逊干涉仪}
+
+迈克尔逊干涉仪是一个分振幅法的双光束干涉仪，其光路如 Figure 1 所
+示，它由反射镜 $M_1$、$M_2$、分束镜 $P_1$ 和补偿板 $P_2$ 组成。其中 $M_1$ 是一个
+固定反射镜，反射镜 $M_2$ 可以沿光轴前后移动，它们分别放置在两个相
+互垂直臂中；分束镜和
+补偿板与两个反射镜均
+成 $45^\circ$ ，且相互平行；分
+束镜 $P_1$ 的一个面镀有半
+透半反膜，它能将入射
+光等强度地分为两束；
+补偿板是一个与分束镜
+厚度和折射率完全相同
+的玻璃板。
+
+光源发出的光经分
+束镜被分成等强度的两
+束光 1 和 2 ，光束 1 和 2 分别经反射镜 $M_1$ 和 $M_2$ 反射后，再次经分光镜
+$P_1$ 向 $E$ 处传播。由于光束 2 在传播过程中三次穿过分束镜，而光束 1
+只有一次穿过分束镜。由于玻璃存在色散，不同波长的光在干涉仪中具
+不同的光程差，为此，在反射镜 $M_1$ 和反射镜之间加入一个补偿板，这
+样光线 1 同样在相同的玻璃板中穿过三次，使所有波长的光可以同时获
+得接近零的光程差，这对于实现白光的干涉是绝对必要的前提。在单色
+光入射时，补偿板可以两臂的光程达到完全对称，如果没用补偿板，单
+色光的干涉条纹将变的很复杂。 
+
+在迈克尔逊干涉仪上可以实现等倾和等厚两种干涉。
+对于等倾干涉，如果反射镜 $M_1$ 和 $M_2$ 到分束镜的距离差为 $d$ ，光线入射角为 $i$ 时，两反射镜反射光的光程差 $\Delta$ 为：
+\begin{equation}
+    \Delta=2nd\cos i'=2d\sqrt{n^2-\sin^2i}
+\end{equation}
+其中，$n$ 为两臂中介质的折射率，$i$ 和 $i'$ 分别为光线入射到 $M_2$ 和 $M_1$ 上
+的入射角，当迈克尔逊干涉仪的两臂中介质相同时，$i=i'$ 。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{fig1.png}
+    \caption{迈克尔逊干涉仪光路}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{fig2.png}
+    \caption{等倾干涉的光程差}
+\end{figure}
+
+当两臂中介质的折射率一定，且 $d$ 不变时，光程差 $\Delta$ 只取决于入射角
+$i$ ，在 $E$ 处观察时，对于相同入射角的光，形成一个以光轴为中心的园环。
+当：
+\begin{equation}
+    \begin{aligned}
+        &\Delta=k\lambda,\quad &k=0,1,2\cdots\quad &\text{为亮条纹}\\
+        &\Delta=\frac{2k+1}{2}\lambda \quad &k=0,1,2,\cdots\quad &\text{为暗条纹}
+    \end{aligned}
+\end{equation} 
+由此可以看出，迈克尔逊干涉仪中，等倾干涉条纹级次是中间大边上小。
+当改变 $d$，光程差也相应发生改变，这时在干涉条纹中心会出现“冒出”
+和“缩进”的现象。当 $d$ 增加 $\lambda/2$，相应的光程差增加 $\lambda$ ，在中心的条纹
+干涉级次由 $k$ 变为 $k+1$，这样就会“冒出”一个条纹；当 $d$ 减少 $\lambda/2$ ，相
+应的光程差减少 $\lambda$ ，在中心的条纹干涉级次由 $k$ 变为 $k-1$ ，这样就会“缩
+进”一个条纹。因此，根据“冒出”或“缩进”条纹的个数可以确定 $d$
+的改变量，它可以用来进行长度测量，其精度是波长量级。当“冒出”
+或“缩进”了 $N$ 个条纹，$d$ 的改变量 $\Delta d$ 为： 
+\begin{equation}
+    \Delta d=N\frac \lambda 2
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{fig3.png}
+    \caption{等厚干涉的光程差}
+\end{figure}
+
+当 $M'_1$、$M_2$ 不相互平行，即 $M_1$ 和 $M_2$
+之间有一小的夹角 $\theta$，光束 1 和 2，在反射后
+相遇在 $M'_2$ 附近的 $P$ 点，如 Figure 3 所示，即
+等厚干涉条纹定为于 $M'_2$ 的表面，两束光
+的光程差仍然是：$\Delta=2d\cos i$
+，如果采用
+孔径角不太大的观察系统或者眼睛观察，
+$i'$ 一般是很小的，这样可以将光程差式(1)
+展开到 $i'$ 的二次项
+\begin{equation}
+    \Delta=2d\left(1-\frac {i'^2}{2} \right) 
+\end{equation}
+当 $d$ 很小，并满足以下时
+\begin{equation}
+    di'^2<<\lambda
+\end{equation}
+ $i'$ 对光程差的影响可以忽略不计，式(4)可以写成 
+\begin{equation}
+    \Delta=2d
+\end{equation}
+ 这时具有相同 $d$ 值的反射光束有相同的光程差，形成平行于交棱的干涉
+直条纹。但如果 $d$ 较大，不满足式(5)时，随着 $i'$ 的增大干涉条纹会发生
+弯曲。
+
+\subsection{利用迈克尔逊干涉仪测量钠黄光双线的平均波长}
+在等倾干涉的条件下，由式（3）可知，在实验中，通过调节 $M_1$ 和 $M_2'$ 的间距 $d$，记录干涉条纹“冒出”（或“缩进”）的条纹数 $N$，可以得到钠黄光双线的平均波长
+\begin{equation}
+    \bar \lambda=\frac{2\Delta d}{N}
+\end{equation} 
+
+\subsection{利用迈克尔逊干涉仪测量钠黄光双线的波长差}
+钠黄光是有两个强度基本相同、波长相差不大的双线组成，它们之
+间的波长差可以利用迈克尔逊干涉仪测得。由式(1)可知，对于不同波长
+的光，即使 $d$ 相同，同一干涉级次的干涉条纹也具有不同的角距离 $i'$ ，
+它们不相重合。
+
+对于钠黄光双线来说，它们的波长分别为 $\lambda_1$、$\lambda_2$，彼此甚为相近。
+如果定义 $\lambda_2>\lambda_1$
+，可能出现这样的情况，当 $d = d_1$ 时，$\lambda_2$ 的 $k_2$ 级亮条纹
+与 $\lambda_1$ 的 $k_1$ 级的暗条纹重合，导致视场的条纹对比度为零，这时有 
+\begin{equation}
+    2d_1\cos i'=k_2\lambda_2=(k_1+\frac 12)\lambda_!
+\end{equation}
+即，$\lambda_2$ 干涉级次改变了 $\delta k$、$\lambda_1$ 的干涉级次改变了 $\delta k+1/2$。这时视场中
+两个波长的亮条纹和亮条纹重合，暗条纹和暗条纹重合，干涉条纹非常
+清晰，其对比度为 1。继续改变 $d$， $d = d_3$，使视场中的干涉条纹可见都
+再次变为零，这时由 $d_1$ 到 $d_3$，$\lambda_2$ 干涉级次改变了 $\delta k'$、$\lambda_1$ 的干涉级次改
+变了 $\delta k'＋1$，于是有：
+\begin{equation}
+    2d_3\cos i'=(k_2+\delta k)\lambda_2=(k_1+\delta k'+\frac 32)\lambda_1
+\end{equation} 
+对于中心的条纹有 $i'\approx 0$,由式（7）和（9）相减可得
+\begin{equation}
+    \delta \lambda=\lambda_1/\delta k'
+\end{equation}
+且，
+\begin{equation}
+    \delta d=d_3-d_1=\delta k'\lambda_2=(\delta k'+1)\lambda_1
+\end{equation}
+将式（11）代入式（10），并考虑到 $\bar\lambda =\frac 12(\lambda_1+\lambda_2)>>\delta \lambda$ 可得
+\begin{equation}
+    \delta \lambda=\frac{\lambda_1\lambda_2}{\delta d}=\frac{\bar\lambda^2}{\delta d}
+\end{equation}
+因此，通过记录两次条纹可见都为零之间，干涉级次的变为 $\delta k'$、或者反射镜 $M_2$ 移动的距离 $\delta d$,分别通过式（10）和（12）得到 $\delta \lambda$。
+
+\section{仪器介绍}
+实验中所使用的WSM－100迈克尔逊干涉仪，其结构如 Figure 4 所示。
+
+固定反射镜10，它倾角可以通过在它背面的三个调整螺丝进行粗调，
+细调时，分别用1和4通过弹簧改变在水平和垂直方向上的倾角。 
+
+可移动反射镜 9，它的倾角调整也是通过其背面的三个螺丝进行，
+但它没有细调。可移动反射镜是安装在一个滑块上，通过丝杠 16 的转
+动可以使滑块沿导轨前后移动。手轮2是通过一个传动比为2:1齿轮组
+带动丝杠转动，反射镜的移动距离可以在直尺 17 上读到毫米，在读数
+窗11 中读到0.01，微动手轮4是通过一个100:1涡轮蜗杆减速机构来实
+现反射镜的精细移动，在微动手轮上的最小读数值为0.0001mm。
+
+分束镜18和补偿板12，以及固定反射镜10是安装在一个固定架上，
+这个固定架又与导轨固定在一起，使得整个光路处在一个比较稳定的状
+态。
+
+导轨是固定在底座7上，底座由三个底角6支撑，可以通过调整螺
+丝调节整个仪器的水平。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig4.png}
+    \caption{迈克尔逊干涉仪}
+\end{figure}
+
+\section{实验内容}
+\subsection{调节迈克尔逊干涉仪}
+
+1.首先调整可移动反射镜 $M_2$ 到分束镜之间的距离，使之与固定反射
+镜 $M_1$ 到分束镜之间的距离大致相等。原因是 $d$ 是过大，不利于观
+察到干涉条纹。
+
+2.调整反射镜 $M_1$ 和 $M_2$ 倾斜，使 $M_1⊥M_2$，即使 $M'_1∥M_2$。具体方法
+是：打开钠灯，在钠灯和分束镜之间加入一个画有一个黑色十字的
+毛玻璃，这时的光源为面光源，在视场中可以看到两组共 4 个十字
+的象，其中两个较深，另两个较浅。调节 $M_1$ 后面的三个螺丝，使
+两组象完全重合，这时两个反射镜接近垂直，应该可以看到干涉条
+纹。
+
+如果没有干涉条纹出现，可重复上面两个步骤。
+
+\subsection{观察等倾和等厚干涉现象}
+观察等倾干涉：观察在看到条纹后，利用手轮 2 和微动手轮 3 改变
+光程差，使干涉条纹疏密适中；并调节 $M_1$ 后面的三个螺丝使圆环处在
+视场中心。这时上、下、左、右移动眼睛，改变观察方向。当眼睛上下
+移动时，干涉条纹有“冒出”和“缩进”，调节反射镜 $M_1$ 下方的弹簧螺
+丝 4，精细改变 $M_1$ 在垂直方向上的倾斜；当眼睛左右移动时，干涉条纹
+有“冒出”和“缩进”，调节反射镜 $M_1$ 侧面的弹簧螺丝 1，精细改变
+$M_1$ 在水平方向上的倾斜；直到在改变观察方向时，干涉条纹没有“冒出”
+和“缩进”，且圆心随眼睛的移动而移动，干涉条纹的大小不发生改变，
+此时，观察到的干涉条纹时严格的等倾干涉条纹。
+
+观察等厚干涉：在观察到等倾干涉条纹后，改变反射镜 $M_2$ 的位置，
+逐步减小光程差，在 $d≈0$ 的附近，利用弹簧螺丝 1 或弹簧螺丝 4 改变
+反射镜 $M_1$ 的倾斜，使 $M'_1$ 和 $M_2$ 形成一个微小的夹角，这时在视场中会
+出现略有弯曲的等厚干涉条纹。
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig2.jpg}
+        \caption{(a) 等倾干涉条纹}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig1.jpg}
+        \caption{(b) 等厚干涉条纹}
+    \end{minipage}
+\end{figure}
+
+\subsection{测量钠黄光的平均波长和钠双线的波长差}
+记录微调手轮 3 每转一周，$\Delta d =10\mu m$，等倾干涉条纹“冒出”或“缩
+进”个数，根据式（3）计算钠黄光的平均波长，并与钠黄光的实际平均波
+长 589.3nm 进行比较，给出相对误差，分析误差的来源。
+\begin{table}[H]
+    \centering
+    \caption{测量钠黄光的平均波长}
+    \vspace{2pt} 
+    \begin{minipage}{0.7\textwidth}
+            \raggedleft
+            $\Delta d=10\ \mathrm{\mu m}$
+    \end{minipage}\\[2pt]
+    \begin{tabular}{cccc}
+        \hline\hline
+        次数 $i$ & 1 & 2 & 3  \\ 
+        $N$ & 33 & 31 & 34 \\ 
+        \hline\hline
+    \end{tabular}
+\end{table}
+计算得到
+\begin{equation}
+    \bar\lambda=\frac{2\Delta d}{\bar N}=612.24\ \mathrm{nm}
+\end{equation}
+相对误差
+\begin{equation}
+    E=\left|\frac{\lambda-\lambda_0}{\lambda_0}\right|\times 100\%=3.9\%
+\end{equation}
+误差来源:
+
+1.条纹数 $N$ 只能取整数值，且难以准确数清；
+
+2.反射镜 $M_1$ 和 $M_2$ 不可能调节至完全平行且难以使得 $i'\approx 0$ ；
+
+3.分束镜和反射镜表明并非完美平整，存在弯曲导致位移偏差。
+
+记录相邻两次视场中干涉条纹可见度为零时，反射镜所移动的距离，
+利用式（12）计算钠双线的波长差。
+\begin{table}[H]
+    \centering
+    \caption{测量钠双线的波长差}
+    \vspace{2pt} 
+    \begin{minipage}{0.7\textwidth}
+            \raggedleft
+            $\bar \lambda=612.24\ \mathrm{nm}$
+    \end{minipage}\\[2pt]
+    \begin{tabular}{cccc}
+        \hline\hline
+        次数 $i$ & 1 & 2 & 3  \\ 
+        $\delta d\ \mathrm{mm}$ & 0.27772 & 0.30556 & 0.29300 \\ 
+        \hline\hline
+    \end{tabular}
+\end{table}
+计算得到
+\begin{equation}
+    \delta \lambda=1.28\ \mathrm{nm}
+\end{equation}
+
+\section{思考题}
+
+1.\textbf{根据迈克耳孙干涉仪的光路，说明各光学元件的作用。}
+
+（1）分光镜：把入射光分成两束强度近似相等的光；把两臂反射回来的光重新合束，使它们叠加形成干涉条纹。
+
+（2）反射镜：各自反射由分光镜分出的光束，使其沿原路返回；通过调整 $M_1$ 或 $M_2$ 的位置（微调螺钉），改变两臂光程差，从而使干涉条纹
+
+（3）补偿板：补偿两束光在玻璃中走过的厚度差，使两臂光程匹配；补偿色散，使得两束光可以出现清晰明亮的干涉条纹。
+
+2.\textbf{在迈克耳孙干涉仪上看到的等倾圆条纹与牛顿环实验中的干涉圆
+条纹有哪些区别？实验中如何避免回空差？}
+
+区别：牛顿环本质上是等厚干涉，且中心暗斑对应着 0 级暗条纹。
+
+如何避免回空差：（1）调节螺旋时保持一个方向；（2）微调镜时不要快速跳动，缓慢调整，使条纹运动均匀，不要大幅来回转动。
+
+3.\textbf{在观察非定域干涉时，为什么当 $d$ 足够大时，屏上看不到干涉条
+纹了?}
+
+光源非严格单色光，持续发光时间 $\tau_0$ 有限，存在时间上的相干性，对应着相干长度 $L_0$。如果 $d$ 过大，就看不到干涉条纹了。
+
+4.\textbf{在实验中有时会观察到椭圆或者马鞍型的条纹，思考成因。} 
+
+等倾条纹椭圆形：（1）两反射镜 $M_1$、$M_2$ 不完全垂直于光路；（2）分光镜或补偿板存在楔角且不完全平行。
+
+等厚条纹马鞍型：（1）反射镜表面不平；（2）组件不在同一平面，光路出现像差；
+
+5.\textbf{改用白色台灯作光源会有什么现象？}
+
+（1）出现彩色的干涉条纹；（2）衬比度下降；（3）条纹范围非常小；
+
+6.\textbf{如果用激光作光源，迈克耳孙干涉仪的两臂不相等，对现象有影
+响吗？}
+
+因为激光的相干性较高，所以（1）两臂不等长时，仍然能看到干涉条纹；（2）两臂差别太大时，条纹亮度会减弱或消失
+
+\end{document}

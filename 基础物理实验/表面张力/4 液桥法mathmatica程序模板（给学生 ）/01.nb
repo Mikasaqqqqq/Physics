@@ -1,0 +1,130 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3830,        122]
+NotebookOptionsPosition[      3211,        104]
+NotebookOutlinePosition[      3598,        121]
+CellTagsIndexPosition[      3555,        118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k", "=", 
+   RowBox[{
+    RowBox[{"445", "/", "271.05"}], "*", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"R", "=", 
+   RowBox[{"2085", "/", "2"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7256719948744555`*^9, 3.7256720315004272`*^9}, {
+  3.7256724511840963`*^9, 3.7256724554875183`*^9}, {3.7256733585995064`*^9, 
+  3.72567336116136*^9}},ExpressionUUID->"e1ca6218-ed9d-4201-88c6-\
+0b87e82df94d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data1", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Fit", "[", 
+  RowBox[{"data1", ",", 
+   RowBox[{"{", "}"}], ",", "x"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.725673277108632*^9, 3.7256732870658994`*^9}, {
+  3.7787139279013915`*^9, 
+  3.778713930976017*^9}},ExpressionUUID->"f4544725-7b59-45ba-9a27-\
+ca133ebfdfb7"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"f1", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "400"}], ",", "400"}], "}"}]}], "]"}]], "Input",ExpressionUU\
+ID->"31ff7c6c-4e10-4d5f-8096-276eacd43a51"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"H", "[", "x_", "]"}], ":=", 
+  FractionBox[
+   RowBox[{" ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox[
+       RowBox[{
+        SuperscriptBox["f1", "\[Prime]",
+         MultilineFunction->None], "[", "x", "]"}], "2"], "-", 
+      RowBox[{
+       RowBox[{"f1", "[", "x", "]"}], " ", 
+       RowBox[{
+        SuperscriptBox["f1", "\[Prime]\[Prime]",
+         MultilineFunction->None], "[", "x", "]"}]}]}], ")"}]}], 
+   RowBox[{"2", " ", 
+    RowBox[{"f1", "[", "x", "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["f1", "\[Prime]",
+          MultilineFunction->None], "[", "x", "]"}], "2"]}], ")"}], 
+     RowBox[{"3", "/", "2"}]]}]]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{
+       RowBox[{"H", "[", "x", "]"}], "/", "k"}]}], ",", 
+     RowBox[{"k", "*", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "1000"}], "*", "9.8"}], 
+       RowBox[{"2", "*", "0.032"}]], "x"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "1000"}], ",", "400"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7256733250042953`*^9, 3.725673334729056*^9}, 
+   3.725673375842986*^9, {3.7256754681417227`*^9, 
+   3.7256754685142565`*^9}},ExpressionUUID->"7e568fe5-e626-4b23-aef0-\
+8e6fd829133a"]
+},
+WindowSize->{1368, 839},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.4 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (2017\:5e7410\:67082\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 498, 13, 69, "Input",ExpressionUUID->"e1ca6218-ed9d-4201-88c6-0b87e82df94d"],
+Cell[1059, 35, 449, 12, 112, "Input",ExpressionUUID->"f4544725-7b59-45ba-9a27-ca133ebfdfb7"],
+Cell[1511, 49, 251, 7, 61, "Input",ExpressionUUID->"31ff7c6c-4e10-4d5f-8096-276eacd43a51"],
+Cell[1765, 58, 1442, 44, 161, "Input",ExpressionUUID->"7e568fe5-e626-4b23-aef0-8e6fd829133a"]
+}
+]
+*)
+

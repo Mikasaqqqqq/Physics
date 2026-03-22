@@ -1,0 +1,249 @@
+\documentclass[12pt]{article} 
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage{threeparttable} 
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{aligned-overset}
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{fontspec}
+\renewcommand{\arraystretch}{1.5}
+% \usepackage[paperwidth=21cm,paperheight=29.7cm]{geometry}
+\usepackage[a4paper,margin=2cm]{geometry}
+\setCJKmainfont{SimSun}
+\setmainfont{SimSun}
+\setsansfont{SimSun}
+% 设置正文字体为四号（12pt）
+% \renewcommand{\CJKmainfont}{SimSun}
+\renewcommand{\CJKfamilydefault}{\CJKrmdefault}
+\renewcommand{\normalsize}{\fontsize{12pt}{18pt}\selectfont}
+\normalsize
+
+\title{密力根油滴实验报告}
+\author{2411545 邱凯锐}
+\date{2025.12.26}
+
+\begin{document}
+\maketitle
+\section{实验目的}
+1. 学习用油滴实验测量电子电荷的原理和方法。
+
+2. 验证电荷的不连续性。
+
+3. 测量电子的电荷量
+\section{实验原理}
+密立根油滴实验测量基本电荷的基本设计思想是使带电油滴在两金属极板之间处于受力平衡状态。
+按运动方式分类，可分为平衡法和动态法。
+\subsection{动态法}
+首先分析重力场中一个足够小的油滴的运动，设此油滴半径为 $r$（亚微米量级），质量为 $m_1$，空气是粘滞流体，故此运动油滴除重力和浮力外还受粘滞阻力的作用。由斯托克斯定律，粘滞阻力与物体运动速度成正比。设油滴以速度 $v_f$ 匀速下落，则有
+\begin{equation}
+    m_1g - m_2g = Kv_f
+\end{equation}
+此处 $m_2$ 为与油滴同体积的空气质量，$K$ 为比例系数，$g$ 为重力加速度。油滴在空气及重力场中的受力情况如 Figure 1 左图所示。
+
+若此油滴带电荷为 $q$，并处在场强为 $E$ 的均匀电场中，设电场力 $qE$ 方向与重力方向相反，如图1右图所示，如果油滴以速度 $v_r$ 匀速上升，则有
+\begin{equation}
+    qE = (m_1 - m_2)g + Kv_r
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fig1.png}
+    \caption{}
+\end{figure}
+
+由式（1）和（2）消去比例系数$K$，可解出$q$为
+\begin{equation}
+q = \frac{(m_1 - m_2)g}{Ev_f} \left( v_f + v_r \right) 
+\end{equation}
+由式（3）可以看出，要测量油滴上电荷量$q$，需要分别测出$m_1$、$m_2$、$E$、$v_f$、$v_r$等物理量。
+
+由喷雾器喷出的油滴的半径$r$是亚微米数量级，直接测量其质量$m_1$是困难的，为此希望消去$m_1$，而代之以容易测量的量。设钟表油与空气的密度分别为$\rho_1$、$\rho_2$，于是半径为$r$的油滴的视重为
+\begin{equation}
+    m_1g - m_2g = \frac{4}{3}\pi r^3 (\rho_1 - \rho_2)g
+\end{equation}
+
+由斯托克斯定律，粘滞流体（此处为空气）对球形运动物体的阻力与物体速度成正比，其比例系数$K$为$6\pi \eta r$，此处的$\eta$为空气粘度，$r$为物体半径。于是可将式（4）代入式（1），有
+\begin{equation}
+    v_f = \frac{2gr^2}{9\eta} (\rho_1 - \rho_2)
+\end{equation}
+因此
+\begin{equation}
+    r = \left[ \frac{9\eta v_f}{2g(\rho_1 - \rho_2)} \right]^{\frac{1}{2}}
+\end{equation}
+以此代入式（3）并整理得到
+\begin{equation}
+    q = 9\sqrt{2}\pi \left[ \frac{\eta^3}{(\rho_1 - \rho_2)g} \right]^{\frac{1}{2}} \frac{1}{E} \left( 1 + \frac{v_r}{v_f} \right) v_f^{\frac{3}{2}}
+\end{equation}
+因此，如果测出$v_r$、$v_f$和$\eta$、$\rho_1$、$\rho_2$、$E$等宏观量即可得到$q$值。
+
+考虑到油滴的直径与空气分子的间隙相当，空气已不能看成是连续介质，其空气粘度$\eta$需修正为$\eta'$：
+\begin{equation}
+\eta' = \frac{\eta}{1 + \frac{b}{pr}}
+\end{equation}
+此处$p$为空气压强，$b$为修正常数，$b=0.00823\ \text{N/m}$，因此式（5）可修正为
+\begin{equation}
+v_f = \frac{2gr^2}{9\eta} (\rho_1 - \rho_2) \left(1 + \frac{b}{pr}\right)
+\end{equation}
+由于半径$r$包含在修正项中，当精度要求不高时，油滴半径可直接由式（6）计算。
+
+将式（6）代入式（8），再将式（8）代入式（7），得到修正后的电荷量公式：
+\begin{equation}
+q = 9\sqrt{2}\pi \left[ \frac{\eta^3}{(\rho_1 - \rho_2)g} \right]^{\frac{1}{2}} \frac{1}{E} \left(1 + \frac{v_r}{v_f}\right) v_f^{\frac{3}{2}} \left[ \frac{1}{1 + \frac{b}{pr}} \right]^{\frac{3}{2}}
+\end{equation}
+实验中通常固定油滴的运动距离$s$，通过测量油滴在距离$s$内的运动时间$t$来计算速度$v$；同时，电场强度$E$可由平行平板间的电压$U$与间距$d$表示：
+\begin{equation*}
+    E = \frac{U}{d}
+\end{equation*}
+
+将$v_f = \dfrac{s}{t_f}$、$v_r = \dfrac{s}{t_r}$及$E = \dfrac{U}{d}$代入式（10），得到实验可直接测量的电荷量表达式：
+\begin{equation}
+    q = 9\sqrt{2}\pi d \left[ \frac{(\eta s)^3}{(\rho_1 - \rho_2)g} \right]^{\frac{1}{2}} \frac{1}{U} \left( \frac{1}{t_f} + \frac{1}{t_r} \right) \left( \frac{1}{t_f} \right)^{\frac{1}{2}} \left[ \frac{1}{1 + \frac{b}{pr}} \right]^{\frac{3}{2}}
+\end{equation}
+
+式中有些量和实验仪器以及条件有关，选定之后在实验过程中不变，如$d$、$s$、$(\rho_1-\rho_2)$及$\eta$等，将这些量与常数一起用$C$代表，可称为仪器常数，于是式（11）简化成
+\[
+q = C \frac{1}{U} \left( \frac{1}{t_f} + \frac{1}{t_r} \right) \left( \frac{1}{t_f} \right)^{\frac{1}{2}} \left[ \frac{1}{1 + \frac{b}{pr}} \right]^{\frac{3}{2}} \tag{$11'$}
+\]
+
+由此可知，测量油滴上的电荷，只体现在$U$、$t_f$、$t_r$的不同。对同一油滴，$t_f$相同，$U$与$t_r$的不同，标志着电荷的不同。
+
+\subsection{平衡法}
+
+平衡测量法的出发点是使油滴在均匀电场中静止在某一位置，或在重力场中作匀速运动。
+
+当油滴在电场中平衡时，油滴在两极板间受到的电场力$qE$、重力$m_1g$和浮力$m_2g$达到平衡，从而静止在某一位置，即
+\[
+qE = (m_1 - m_2)g
+\]
+
+油滴在重力场中作匀速运动时，情形同动态测量法，将式（4）、（8）和（9）代入式（11）并注意到$1/t_r=0$，则有
+\begin{equation}
+    q = 9\sqrt{2}\pi d \left[ \frac{(\eta s)^3}{(\rho_1 - \rho_2)g} \right]^{\frac{1}{2}} \frac{1}{U} \left( \frac{1}{t_f} \right)^{\frac{3}{2}} \left[ \frac{1}{1 + \frac{b}{pr}} \right]^{\frac{3}{2}}
+\end{equation}
+
+\subsection{元电荷的测量方法}
+测量油滴上所带电荷量$q$的目的是找出电荷的最小单位$e$。为此可以对不同的油滴，分别测出其所带的电荷值$q_i$，它们应近似为元电荷的整数倍。油滴电荷量的最大公约数，或油滴带电量之差的最大公约数，即为元电荷$e$。
+\begin{equation}
+    q_i = n_i e \quad (n_i \text{ 为整数})
+\end{equation}
+也可用作图法求$e$值，根据式（13），$e$为直线方程的斜率，通过拟合直线即可求得$e$值。
+
+\section{实验仪器}
+实验仪由主机、CCD成像系统、油滴盒、监视器和喷雾器等部件组成。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig2.jpg}
+    \caption{}
+\end{figure}
+
+\section{实验内容}
+本实验采用平衡法。
+
+1. 调节实验仪主机的调平螺钉旋钮，直到水准泡正好处于中心。将实验平台调平，使平衡电场方向与重力方向平行以免引起实验误差；
+
+2. 将平衡电压调整为 400V 左右，通过喷雾口向油滴盒内喷入油雾，此时监视器上将出现大量运动的油滴。选取处于合适的缓慢上升状态的油滴，
+调节电压$U$，使其处于平衡状态，然后提升至“0”格线上方；
+
+3. 将 “0V/工作” 状态按键切换至 "0V"，此时油滴开始下落，当油滴下落到 “0” 格线时，立即按下计时开始键，同时计时器启动，开始记录油滴的下落时间 $t$；
+
+4. 对于一个油滴，重复测量平衡电压 $U$ 和下落时间 $t$ 5次。选取 5 个油滴重复进行实验，得到实验数据。
+
+\section{实验数据}
+
+\begin{table}[H]
+    \centering
+    \caption{实验数据}
+    \begin{minipage}{0.7\textwidth}
+        \raggedleft
+        $e_{理论}=1.6021773\times 10^{-19}\mathrm C$
+    \end{minipage}
+    \begin{tabular}{cccccc}
+        \hline\hline
+        $i$                                 & 1                    & 2                    & 3                    & 4                    & 5                    \\
+        $q_i/10^{-19}\mathrm C$             & 1.679                  &  6.588      & 1.583   & 3.181       &     1.576     \\
+        $n_i$                               & 1                     &   4          &     1        &     2      & 1                     \\
+        $e_i/10^{-19}\mathrm C$ & 1.679 &  1.647 & 1.583 & 1.5905 & 1.576 \\
+        \hline\hline
+    \end{tabular}
+\end{table}
+计算得到
+\begin{equation}
+    \bar e=\frac{1}{n}\sum_{i=1}^{n} e_i=1.615\times 10^{-19}\mathrm C
+\end{equation}
+不确定度
+\begin{equation}
+    u_e=\sqrt{\dfrac{\sum_{i=1}^n(e_i-\bar e)^2}{n(n-1)}}=0.020 \times 10^{-19}\mathrm C
+\end{equation}
+得到 $e'=\bar e\pm u_e=(1.6151\pm 0.020) \times 10^{-19}\mathrm C$。
+相对误差为
+\begin{equation}
+    \eta=\frac{|\bar e-e_{理论}|}{e_{理论}}=0.81\%
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3a.jpg}
+        \caption{参数设置}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3b.jpg}
+        \caption{}
+    \end{subfigure}
+    \vfil
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3c.jpg}
+        \caption{}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3d.jpg}
+        \caption{}
+    \end{subfigure}
+    \vfil
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3e.jpg}
+        \caption{}
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig3f.jpg}
+        \caption{}
+    \end{subfigure}
+    \caption{}
+\end{figure}
+
+
+\section{误差分析}
+1. 油滴的布朗运动，影响平衡电压的调节和时间的测量。
+
+2. 实验仪主机和 CCD 没有完全调平，观察到的油滴运动并非理想竖直运动，影响速度的测量。
+
+3. 油滴并非完全球形，粘滞阻力计算值与实际存在误差；
+
+4. 高压漏电或边缘效应导致有效电场减弱；
+
+5. 人的反应时间导致时间测量存在误差；
+
+6. 温度变化影响空气黏度及油滴悬浮状态；
+
+7. 实验平台振动或空气扰动会使油滴受外界力而偏离竖直轨迹。
+\end{document}
